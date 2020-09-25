@@ -1,0 +1,24 @@
+# Tecnologias-Web---CRUD
+
+- Figma Project Design:
+https://www.figma.com/file/OekwFnUD1jDmGDdUaApb4M/tecweb-project_1-crud?node-id=0%3A1
+
+- Script para geração do DATABASE:
+
+CREATE DATABASE tecweb;
+
+USE tecweb;
+
+CREATE TABLE user(id INT NOT NULL AUTO_INCREMENT, name VARCHAR(32) NOT NULL, password VARCHAR(32) NOT NULL, PRIMARY KEY (id));
+
+INSERT user (name,password) VALUES ("joao","123123");
+INSERT user (name,password) VALUES ("maria","123123");
+
+CREATE TABLE task(id INT NOT NULL AUTO_INCREMENT, userId INT NOT NULL, title VARCHAR(32) NOT NULL, type VARCHAR(32) NOT NULL, date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, deadline TIMESTAMP NOT NULL, PRIMARY KEY (id));
+
+INSERT task (userId, title, type , deadline ) VALUES (1,'crud','personal',CURRENT_TIMESTAMP);
+INSERT task (userId, title, type , deadline ) VALUES (1,'medical','health',CURRENT_TIMESTAMP);
+INSERT task (userId, title, type , deadline ) VALUES (1,'study','work',CURRENT_TIMESTAMP);
+INSERT task (userId, title, type , deadline ) VALUES (1,'benchmarking','work',CURRENT_TIMESTAMP);
+INSERT task (userId, title, type , deadline ) VALUES (1,'meet','personal',CURRENT_TIMESTAMP);
+INSERT task (userId, title, type , deadline ) VALUES (1,'dinner','personal',CURRENT_TIMESTAMP);
